@@ -20,5 +20,5 @@ jobs:
             cd /home/ec2-user/digiturno/business
             git pull origin main
             cd /home/ec2-user/digiturno
-            docker-compose down
+            docker-compose stop business-service
             docker-compose up -d --build business-service
