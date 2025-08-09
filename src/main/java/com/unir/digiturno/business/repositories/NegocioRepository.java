@@ -22,3 +22,4 @@ public interface NegocioRepository extends CrudRepository<Negocio, Long>{
            "c.nombre, n.idCategoria, n.horaInicio, n.horaFin, n.duracionCita")
     List<NegocioListDTO> findAllWithCategoryAndRating();
 }
+
