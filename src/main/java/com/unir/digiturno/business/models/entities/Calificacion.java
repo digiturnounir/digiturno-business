@@ -2,12 +2,14 @@ package com.unir.digiturno.business.models.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "calificaciones")
 public class Calificacion {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_calificacion")
     private Long idCalificacion;
 
@@ -24,6 +26,7 @@ public class Calificacion {
     private String comentario;
 
     @Column(name = "fecha")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime fecha;
 
     // Constructores
